@@ -7,10 +7,33 @@ function sabe() {
     console.log(nombre)
 }*/
 
-let BoxModal = document.getElementById("box-modal")
-let body_u = document.body
+var popup = document.getElementById("popupForms")
+var closep = document.getElementById("closePopUp")
+var closeImg = document.getElementById("closeImg")
 
-let abrir = document.querySelector(".b-play")
+document.addEventListener("DOMContentLoaded", () => {
+        popup.style.zIndex = 9999
+        body_u.style.overflow = "hidden"
+})
+
+closep.addEventListener("click", () => {
+        popup.style.zIndex = -1
+        popup.style.opacity = 0
+        body_u.style.overflow = "visible"
+        closeImg.style.display = "none"
+
+})
+
+
+
+
+
+var naver = document.querySelector("nav")
+var BoxModal = document.getElementById("box-modal");
+var body_u = document.body;
+
+
+var abrir = document.querySelector(".b-play")
 abrir.addEventListener("click", () => 
 {
    //Manera Correcta de "Agregar y Remover" Clases CSS
@@ -21,7 +44,7 @@ abrir.addEventListener("click", () =>
 });
 
 
-let cerrar = document.getElementById("cerrar")
+var cerrar = document.getElementById("cerrar")
 cerrar.addEventListener("click", () => 
 {
     BoxModal.classList.add("d-none")
@@ -30,16 +53,27 @@ cerrar.addEventListener("click", () =>
 });
 
 
-let year = document.getElementById("year")
-var a_year = new Date().getFullYear();
+
+const year = document.getElementById("year")
+const a_year = new Date().getFullYear();
 year.innerText = a_year
 
 
 
-var width = document.body.clientWidth;
+window.addEventListener("scroll", () => {
+    var sw = window.scrollY
+    var redondeo  = Math.ceil(sw) 
+    
+    if (redondeo > 100 ) {
+        naver.classList.add("bg-naver")
+        naver.classList.remove("bg-naver2")
+    }
+    else
+    {
+        naver.classList.remove("bg-naver")
+        naver.classList.add("bg-naver2")
+    }
 
+})
 
-document.addEventListener("width", function() {
-    console.log(width)
-  });
 

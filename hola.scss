@@ -1,12 +1,41 @@
 
 $blanco: #ffffff;
 
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+#popupForms {
+    background-color: #633c3c82;
+}
+
+
+#closePopUp {
+            background-color: #000000;
+            border-radius: 50%;
+        }
+
+
 .fixed-top {
     top: 0;
     left: 0;
     right: 0;
     position: fixed;
+    padding: 14px 45px;
+
+     a {
+         color: $blanco;
+     }
+
+     a:hover {
+        color: #fffb71;
+        }
 }
+
+ 
+
 
 .col-12 span {
     font-size: 40px;
@@ -57,7 +86,7 @@ header {
         color: #596dffc4;
     }  
     p {
-        color: #949494;
+        color: #616161;
     }
 }
 
@@ -67,39 +96,219 @@ header {
 }
 
 
-    img {
+img {
         width: 100%;
     }
 
 
 .join-banner {
         height: 35vh;
-        background-image: url(http://via.placeholder.com/1200x350);
+        background-image: url(../img/voluntario.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        position: relative;
+ 
+    }
 
-            p{
+ .r-p{
                 color: #ffffff;
                 font-size: 2.5rem;
-                cursor: pointer;
                 text-transform: uppercase;
             }
+
+.zon {
+                 z-index: 999;
+}
+
+
+.bg-naver {
+    animation: hola 0.6s ease forwards;
+}
+
+
+@keyframes hola
+{
+    from {
+        background-color: #ffff0000;
     }
+
+    to {
+        background-color: #54bbe8;
+    }
+}
+
+
+
+#SendInfo {
+    padding: 10px 20px;
+    background-color: #95bc5a;
+    color: $blanco;
+}
+
+
+
+.bg-naver2 {
+     animation: transi 0.6s ease forwards;
+}
+
+
+@keyframes transi
+{
+    from {
+        background-color: #54bbe8;
+    }
+
+    to {
+        background-color: #ffff0000;
+    }
+}
+
+
+
+
+.bg-MLigth {
+    background-color: #f5f2f273;
+}
+
+ .remi {
+        font-size: 1.1rem;
+    }
+    
+
+   
+
+    @mixin BackPhoto {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+
+.back-image1 
+{
+    @include BackPhoto();
+    background-image: url(../img/causa1.jpg);
+}
+ .back-image2 
+ {
+    @include BackPhoto();
+    background-image: url(../img/causa2.jpg);
+ }   
+.back-image3
+{
+        @include BackPhoto();
+    background-image: url(../img/causa3.jpg);
+}
+
 
 .r-box {
     height: 70vh;
 }
 
-footer {
-    background-image: linear-gradient(to right, #0f8e7f, #b4ff31);
+
+
+
+
+.overlay {
+    height: 35vh;
+    width: 100%;
+    position: absolute;
+    background-color: #10658d8f;
+}
+
+
+
+
+@media screen and (max-width: 767px)
+{
+    .r-box {
+    height: 35vh;
+    }
+
+    .remR {
+        font-size: 1.5rem;
+    }
+
+
+        .r-p{
+                font-size: 1.1rem;
+            }
+
+.fixed-top {
+    padding: 14px 18px;
+            }
+
+
+            
+    #SendInfo {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (min-width:768px) and (max-width:1199px)
+{
+    .r-box {
+    height: 40vh;
+    }
+}
+
+
+@media screen and (min-width:1200px)
+{
+    
+    .posab {
+        position: absolute;
+
+            .flybox {
+                width: 37%;
+            }
+
+        
+        .r-box2 {
+            height:78%;   
+        }
+    }
+}
+
+
+@mixin Bcolor($backC)
+{
+    background-color: $backC;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    margin-right: 0.5em;
+    color: #ffffff;
+}
+
+
+#iconos-f {
+background-image: linear-gradient(to right, #0f8e7f, #8fd418);
+ 
     p{
         color: #ffffff;
         text-shadow: 3px 2px 5px #000000;
         font-size: 1.2em;
     }
-}
+
+        .i-you {
+            @include Bcolor(#f60924e6);
+            padding: 15px 15px;
+        }
+
+
+         .i-face {
+            @include Bcolor(#2a02e4);
+            padding: 15px 22px;
+        }
+
+
+         .i-insta {
+            @include Bcolor(#ff23a1);
+            padding: 15px 20px;
+        }
+    }
+
 
 
 /* Si quiero que esto sea diferente. Solo debo dividir esto en partes. Osea para que no te siga la foto  // codigo =  background: url("../img/bb.jpg") no-repeat center center fixed; */
