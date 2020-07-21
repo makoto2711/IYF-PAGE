@@ -45,7 +45,7 @@ html {
 header {
     z-index: 1;
     height: 100vh;
-    background-image: url("../img/bb.jpg");
+    background-image: url("../img/foto11.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
@@ -107,8 +107,7 @@ img {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
- 
-    }
+}
 
  .r-p{
                 color: #ffffff;
@@ -173,11 +172,9 @@ img {
  .remi {
         font-size: 1.1rem;
     }
-    
+     
 
-   
-
-    @mixin BackPhoto {
+@mixin BackPhoto {
             background-size: cover;
             background-repeat: no-repeat;
             height: 200px;
@@ -196,16 +193,37 @@ img {
 .back-image3
 {
         @include BackPhoto();
-    background-image: url(../img/causa3.jpg);
+    background-image: url(../img/foto33.jpeg);
 }
+
+
+@mixin BackPhoto2 {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+
+
+.back-image4
+{
+        @include BackPhoto2();
+    background-image: url(../img/foto22.jpeg);
+}
+
+
+
+.back-image5
+{
+        @include BackPhoto2();
+    background-image: url(../img/foto33.jpeg);
+}
+
+
 
 
 .r-box {
     height: 70vh;
 }
-
-
-
 
 
 .overlay {
@@ -254,9 +272,9 @@ img {
 }
 
 
+/*
 @media screen and (min-width:1200px)
 {
-    
     .posab {
         position: absolute;
 
@@ -264,12 +282,12 @@ img {
                 width: 37%;
             }
 
-        
         .r-box2 {
             height:78%;   
         }
     }
 }
+*/
 
 
 @mixin Bcolor($backC)
@@ -312,12 +330,5 @@ background-image: linear-gradient(to right, #0f8e7f, #8fd418);
 
 
 /* Si quiero que esto sea diferente. Solo debo dividir esto en partes. Osea para que no te siga la foto  // codigo =  background: url("../img/bb.jpg") no-repeat center center fixed; */
-
-
-
-
-
-
-
 
 

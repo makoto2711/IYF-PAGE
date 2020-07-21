@@ -5,7 +5,7 @@ enviar.addEventListener("click", sabe)
 function sabe() {
     let nombre = document.getElementById("tesla").value
     console.log(nombre)
-}*/
+}
 
 var popup = document.getElementById("popupForms")
 var closep = document.getElementById("closePopUp")
@@ -23,8 +23,7 @@ closep.addEventListener("click", () => {
         closeImg.style.display = "none"
 
 })
-
-
+*/
 
 
 
