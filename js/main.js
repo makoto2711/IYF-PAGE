@@ -31,6 +31,18 @@ var naver = document.querySelector("nav")
 var BoxModal = document.getElementById("box-modal");
 var body_u = document.body;
 
+var presto = document.querySelectorAll("li")
+
+presto.forEach(function(boton) {
+        boton.addEventListener("click", () => {
+            document.getElementById("navbarNav").classList.remove("show")
+        })
+})
+
+
+
+
+
 
 var abrir = document.querySelector(".b-play")
 abrir.addEventListener("click", () => 
@@ -38,7 +50,7 @@ abrir.addEventListener("click", () =>
    //Manera Correcta de "Agregar y Remover" Clases CSS
     BoxModal.classList.remove("d-none")
     BoxModal.classList.add("d-flex")  
-    body_u.style.overflow = "hidden"
+   // body_u.style.overflow = "hidden"
 
 });
 
@@ -48,7 +60,7 @@ cerrar.addEventListener("click", () =>
 {
     BoxModal.classList.add("d-none")
     BoxModal.classList.remove("d-flex") 
-    body_u.style.overflow = "visible"
+  //  body_u.style.overflow = "visible"
 });
 
 

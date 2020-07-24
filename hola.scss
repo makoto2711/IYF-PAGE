@@ -199,6 +199,7 @@ img {
 
 @mixin BackPhoto2 {
             background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             height: 300px;
         }
@@ -239,7 +240,7 @@ img {
 @media screen and (max-width: 767px)
 {
     .r-box {
-    height: 35vh;
+    height: 33vh;
     }
 
     .remR {
@@ -267,7 +268,7 @@ img {
 @media screen and (min-width:768px) and (max-width:1199px)
 {
     .r-box {
-    height: 40vh;
+    height: 50vh;
     }
 }
 
